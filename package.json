@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
     "@next/font": "13.1.2",
     "@ngneat/falso": "^6.4.0",
@@ -33,6 +36,7 @@
     "@tanstack/react-query-devtools": "^4.22.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.1"
   }
 }
