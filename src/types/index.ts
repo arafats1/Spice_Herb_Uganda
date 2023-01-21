@@ -27,6 +27,7 @@ export type TApiSingleCategoryWithProductResp = {
     };
 };
 
+
 export type TApiSingleProductResp = {
     product: {
         title: string;
