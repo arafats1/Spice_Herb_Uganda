@@ -56,6 +56,7 @@ const getSingleCategory = async (
                 .json({ category: { ...categoriesData, hasMore } });
         }
 
+        // categories data
         const categoriesData = await prisma.category.findUnique({
             where: {
                 id,
