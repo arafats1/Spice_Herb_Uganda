@@ -89,6 +89,8 @@ const getSingleCategory = async (
             hasMore = false;
         }
 
+        // console.log(categoriesData);
+
         return res
             .status(200)
             .json({ category: { ...categoriesData, hasMore } });
