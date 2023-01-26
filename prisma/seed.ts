@@ -9,7 +9,7 @@ import { PrismaClient } from "@prisma/client";
 const primsa = new PrismaClient();
 
 const main = async () => {
-    //categories
+    
     try {
         await primsa.category.deleteMany();
         await primsa.product.deleteMany();
