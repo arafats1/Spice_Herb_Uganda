@@ -101,6 +101,55 @@ const getSingleCategory = async (
     }
 };
 
+const deleteOneCategory = async (
+    req: NextApiRequest,
+    res: NextApiResponse<TApiSingleCategoryWithProductResp | TApiErrorResp>
+) => {
+    try {
+        const id = req.query.id as string;
+        const category = await prisma.category.delete({
+            where: {
+                id,
+            },
+            select: {
+                id: true,
+                name: true,
+                products: {
+                    orderBy: {
+                        createdAt: "desc",
+                    },
+                    take: 12,
+                    select: {
+                        id: true,
+                        title: true,
+                        description: true,
+                        image: true,
+                        price: true,
+                        quantity: true,
+                    },
+                },
+            },
+
+        });
+        if (!category) {
+            return res.status(404).json({ message: `Category not found` });
+        }
+        else {
+            return res.status(200).json({ 
+                message: `Category deleted successfully`,
+             });
+        }
+    } catch (error) {
+        return res.status(500).json({
+            message: "Something went wrong!! Please try again after sometime",
+        });
+    }
+};
+
+
+
+
 const handler = nc({ attachParams: true }).get(getSingleCategory);
+handler.delete(deleteOneCategory);
 
 export default handler;
