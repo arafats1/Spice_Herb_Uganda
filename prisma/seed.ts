@@ -109,7 +109,7 @@ const main = async () => {
             description: "Cinnamon is a spice made from the inner bark of several tree species from the genus Cinnamomum. Cinnamon is used mainly as an aromatic condiment and flavouring additive.",
             price: "10,000 per Kg",
             quantity: 10,
-            image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858594/Spices/cinamon_sticks_jw8k6c.png",
+            image: "https://res.cloudinary.com/druug5tgz/image/upload/v1675165151/Spices/cina2_c6ayew.png",
             category: {
                 connectOrCreate: {
                     where: {
