@@ -10,50 +10,6 @@ const primsa = new PrismaClient();
 
 const main = async () => {
     
-    // try {
-    //     await primsa.category.deleteMany();
-    //     await primsa.product.deleteMany();
-    //     const fakeProducts = randProduct({
-    //         length: 1000,
-    //     });
-    //     for (let index = 0; index < fakeProducts.length; index++) {
-    //         const product = fakeProducts[index];
-    //         const productAdjective = randProductAdjective();
-    //         await primsa.product.upsert({
-    //             where: {
-    //                 title: `${productAdjective} ${product.title}`,
-    //             },
-    //             create: {
-    //                 title: `${productAdjective} ${product.title}`,
-    //                 description: product.description,
-    //                 price: product.price,
-    //                 image: `${product.image}/tech`,
-    //                 quantity: randNumber({ min: 10, max: 100 }),
-    //                 category: {
-    //                     connectOrCreate: {
-    //                         where: {
-    //                             name: product.category,
-    //                         },
-    //                         create: {
-    //                             name: product.category,
-    //                             createdAt: randBetweenDate({
-    //                                 from: new Date("10/06/2020"),
-    //                                 to: new Date(),
-    //                             }),
-    //                         },
-    //                     },
-    //                 },
-    //                 createdAt: randBetweenDate({
-    //                     from: new Date("10/07/2020"),
-    //                     to: new Date(),
-    //                 }),
-    //             },
-    //             update: {},
-    //         });
-    //     }
-    // } catch (error) {
-    //     throw error;
-    // }
 
     
     //  await primsa.category.create({
@@ -82,26 +38,32 @@ const main = async () => {
        
     // });
 
-    //create products
-    // await primsa.product.create({
+    // await primsa.category.create({
     //     data: {
-    //         title: "Turmeric",
-    //         description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
-    //         price: "20,000 per Kg",
-    //         quantity: 10,
-    //         image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
-    //         category: {
-    //             connectOrCreate: {
-    //                 where: {
-    //                     name: "Spices",
-    //                 },
-    //                 create: {
-    //                     name: "Spices",
-    //                 },
-    //             },
-    //         },
-    //     },
+    //         name: "Spices"
+    //     }
     // });
+
+    //create products
+    await primsa.product.create({
+        data: {
+            title: "Turmeric",
+            description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
+            price: "20,000 per Kg",
+            quantity: 10,
+            image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
+            category: {
+                connectOrCreate: {
+                    where: {
+                        name: "Spices",
+                    },
+                    create: {
+                        name: "Spices",
+                    },
+                },
+            },
+        },
+    });
 
     // await primsa.product.create({
     //     data: {
@@ -423,25 +385,25 @@ const main = async () => {
     //     },
     // });
 
-    await primsa.product.create({
-        data: {
-            title: "Cumin",
-            description: "Cumin is a flowering plant in the family Apiaceae, native from the east Mediterranean to India. It is a herbaceous annual plant, about 50 cm (20 in) tall, with yellow flowers.",
-            price: "5,000 per Kg",
-            quantity: 10,
-            image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675173063/Spices/cumin2_tguo5g.png",
-            category: {
-                connectOrCreate: {
-                    where: {
-                        name: "Spices",
-                    },
-                    create: {
-                        name: "Spices",
-                    },
-                },
-            },
-        },
-    });
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Cumin",
+    //         description: "Cumin is a flowering plant in the family Apiaceae, native from the east Mediterranean to India. It is a herbaceous annual plant, about 50 cm (20 in) tall, with yellow flowers.",
+    //         price: "5,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675173063/Spices/cumin2_tguo5g.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Spices",
+    //                 },
+    //                 create: {
+    //                     name: "Spices",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
 
 
 

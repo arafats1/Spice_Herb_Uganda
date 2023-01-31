@@ -56,7 +56,7 @@ const ProductGrid = (props: IProductGrid) => {
                                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                                     />
                                 </div>
-                                <div className="relative mt-2">
+                                <div className="relative mt-1">
                                     <h3 className="text-sm font-medium text-gray-900">
                                         {product.title}
                                     </h3>
