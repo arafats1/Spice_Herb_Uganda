@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>All Products</title>
+                <title>Spice Herb Uganda</title>
                 <meta name="description" content="All Products" />
                 <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/druug5tgz/image/upload/v1675207938/Spices/favicon-16x16_yctsda.png" />
             </Head>
