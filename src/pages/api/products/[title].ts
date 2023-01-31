@@ -61,6 +61,44 @@ const deleteOneProduct = async (
     }
 };
 
+//edit product
+ 
+const editProduct = async (
+    req: NextApiRequest,
+    res: NextApiResponse<TApiSingleProductResp | TApiErrorResp>
+) => {
+    try {
+        const title = req.query.title as string;
+        const product = await prisma.product.update({
+            where: {
+                title,
+            },
+            data: {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                quantity: req.body.quantity,
+                image: req.body.image,
+            },
+            select: {
+                title: true,
+                description: true,
+                price: true,
+                quantity: true,
+                image: true,
+            },
+        });
+        if (!product) {
+            return res.status(404).json({ message: `Product not found` });
+        }
+        return res.status(200).json({ product });
+    } catch (error) {
+        return res.status(500).json({
+            message: "Something went wrong!! Please try again after sometime",
+        });
+    }
+};
+
 
 const handler = nc({ attachParams: true }).get(getSingleProduct);
 handler.delete(deleteOneProduct);
