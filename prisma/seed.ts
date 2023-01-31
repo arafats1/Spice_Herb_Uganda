@@ -45,25 +45,25 @@ const main = async () => {
     // });
 
     //create products
-    await primsa.product.create({
-        data: {
-            title: "Turmeric",
-            description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
-            price: "20,000 per Kg",
-            quantity: 10,
-            image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
-            category: {
-                connectOrCreate: {
-                    where: {
-                        name: "Spices",
-                    },
-                    create: {
-                        name: "Spices",
-                    },
-                },
-            },
-        },
-    });
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Turmeric",
+    //         description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
+    //         price: "20,000 per Kg",
+    //         quantity: 10,
+    //         image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Spices",
+    //                 },
+    //                 create: {
+    //                     name: "Spices",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
 
     // await primsa.product.create({
     //     data: {
@@ -405,8 +405,185 @@ const main = async () => {
     //     },
     // });
 
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Rosemary",
+    //         description: "Rosemary is a woody, perennial herb with fragrant, evergreen, needle-like leaves and white, pink, purple, or blue flowers, native to the Mediterranean region. ",
+    //         price: "5,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204682/Spices/Rosemary_raf5sp.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
 
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Sage",
+    //         description: " Salvia officinalis, the common sage or just sage, is a perennial, evergreen subshrub, with woody stems, grayish leaves, and blue to purplish flowers.",
+    //         price: "8,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204681/Spices/Sage_bj9ojo.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });    
 
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Thyme",
+    //         description: "Thyme is a genus of about 350 species of perennial aromatic herbs and subshrubs in the family Lamiaceae, native to temperate regions of the Old World. ",
+    //         price: "5,000 per Kg",
+    //         quantity: 10,
+    //         image: "https://res.cloudinary.com/druug5tgz/image/upload/v1675204680/Spices/thyme_u6hxke.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    //  await primsa.product.create({
+    //     data: {
+    //         title: "Mint",
+    //         description: "Mint is a genus of plants belonging to the family Lamiaceae (mint family). The genus comprises about 25–30 species of flowering plants, which are perennial, semi-evergreen or evergreen herbs.",
+    //         price: "7,000 per Kg",
+    //         quantity: 10,
+    //         image: "https://res.cloudinary.com/druug5tgz/image/upload/v1675204681/Spices/Mint_kquqws.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Oregano Leaves",
+    //         description: "Oregano is a flowering plant in the mint family Lamiaceae. It is native to the Mediterranean region",
+    //         price: "5,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204677/Spices/oregano_niqomr.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Parsley",
+    //         description: "Parsley is a genus of about 30 species of flowering plants in the family Apiaceae that are native to the central and eastern Mediterranean region and surrounding areas.",
+    //         price: "3,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204679/Spices/Parsley_yv5n57.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Dill",
+    //         description: "Dill is an annual herb in the celery family Apiaceae. It is a common ingredient in pickling, and is used as a flavoring agent in many cuisines.",
+    //         price: "4,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204680/Spices/Dill_tamubn.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Basil",
+    //         description: "Basil is a culinary herb of the family Lamiaceae (mint family). It is also called great basil to distinguish it from the related Holy basil.",
+    //         price: "2,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204677/Spices/Basil_ovy667.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Fresh Coriander ",
+    //         description: "Coriander, also known as cilantro or Chinese parsley, is an annual herb in the family Apiaceae. It is also known as dhania or kothmir in Hindi.",
+    //         price: "3,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204677/Spices/coriander_rdyinw.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Herbs",
+    //                 },
+    //                 create: {
+    //                     name: "Herbs",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
 
 
 
