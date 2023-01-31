@@ -56,30 +56,51 @@ const main = async () => {
     // }
 
     
-     await primsa.category.create({
-        data: {
-            name: "Spices",
-            products: {
-                create: [
-                    {
-                        title: "Turmeric",
-                        description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
-                        price: "20,000 per Kg",
-                        image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
-                        quantity: 10,
-                    },
-                    {
-                        title: "Cinnamon",
-                        description: "Cinnamon is a spice made from the inner bark of several tree species from the genus Cinnamomum. Cinnamon is used mainly as an aromatic condiment and flavouring additive in a wide variety of cuisines, sweet and savoury dishes, breakfast cereals, snackfoods, tea and traditional foods.",
-                        price: "20,000 per Kg",
-                        image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858594/Spices/cinamon_sticks_jw8k6c.png",
-                        quantity: 10,
-                    }
-                ]
-            }
-        }
+    //  await primsa.category.create({
+    //     data: {
+    //         name: "Spices",
+    //         products: {
+    //             create: [
+    //                 {
+    //                     title: "Turmeric",
+    //                     description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
+    //                     price: "20,000 per Kg",
+    //                     image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
+    //                     quantity: 10,
+    //                 },
+    //                 {
+    //                     title: "Cinnamon",
+    //                     description: "Cinnamon is a spice made from the inner bark of several tree species from the genus Cinnamomum. Cinnamon is used mainly as an aromatic condiment and flavouring additive in a wide variety of cuisines, sweet and savoury dishes, breakfast cereals, snackfoods, tea and traditional foods.",
+    //                     price: "20,000 per Kg",
+    //                     image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858594/Spices/cinamon_sticks_jw8k6c.png",
+    //                     quantity: 10,
+    //                 }
+    //             ]
+    //         }
+    //     }
 
        
+    // });
+
+    //create products
+    await primsa.product.create({
+        data: {
+            title: "Turmeric",
+            description: "Turmeric is a spice that comes from the root of a plant in the ginger family. It's used in cooking and has been used in traditional medicine for thousands of years.",
+            price: "20,000 per Kg",
+            quantity: 10,
+            image: "https://res.cloudinary.com/druug5tgz/image/upload/v1674858596/Spices/Turmeric-PNG-Clipart_f0tujt.png",
+            category: {
+                connectOrCreate: {
+                    where: {
+                        name: "Spices",
+                    },
+                    create: {
+                        name: "Spices",
+                    },
+                },
+            },
+        },
     });
 
 };
