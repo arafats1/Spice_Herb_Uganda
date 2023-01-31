@@ -91,7 +91,7 @@ const SingleProduct = () => {
                                             {product.description}
                                         </p>
                                         <p className="text-xl font-normal text-gray-500 mt-4">
-                                            USD {product.price}
+                                            UGX {product.price}
                                         </p>
                                         <button
                                             onClick={() =>

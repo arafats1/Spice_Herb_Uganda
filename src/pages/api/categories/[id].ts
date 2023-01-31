@@ -149,6 +149,7 @@ const deleteOneCategory = async (
 
 
 
+
 const handler = nc({ attachParams: true }).get(getSingleCategory);
 handler.delete(deleteOneCategory);
 
