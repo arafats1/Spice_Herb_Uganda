@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             <Head>
                 <title>All Products</title>
                 <meta name="description" content="All Products" />
-                <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/druug5tgz/image/upload/v1675207692/Spices/favicon-16x16_snuip4.png" />
+                <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/druug5tgz/image/upload/v1675207938/Spices/favicon-16x16_yctsda.png" />
             </Head>
 
             <main className="container mx-auto">
