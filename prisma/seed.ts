@@ -1,14 +1,11 @@
-import {
-    randBetweenDate,
-    randNumber,
-    randProduct,
-    randProductAdjective,
-} from "@ngneat/falso";
+
 import { PrismaClient } from "@prisma/client";
 
 const primsa = new PrismaClient();
 
 const main = async () => {
+
+    // seedings
     
 
     
