@@ -582,6 +582,26 @@ const main = async () => {
     //     },
     // });
 
+    // await primsa.product.create({
+    //     data: {
+    //         title: "Onion Powder",
+    //         description: "Onion powder is a spice made from dehydrated onions. It is used as a seasoning in many dishes, especially in soups, stews, and sauces.",
+    //         price: "2,000 per Kg",
+    //         quantity: 10,
+    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1676400335/Spices/onion_powder_vtr1oz.png",
+    //         category: {
+    //             connectOrCreate: {
+    //                 where: {
+    //                     name: "Spices",
+    //                 },
+    //                 create: {
+    //                     name: "Spices",
+    //                 },
+    //             },
+    //         },
+    //     },
+    // });
+
 
 
 };
