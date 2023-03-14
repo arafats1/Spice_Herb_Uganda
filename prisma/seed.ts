@@ -562,25 +562,25 @@ const main = async () => {
     //     },
     // });
 
-    // await primsa.product.create({
-    //     data: {
-    //         title: "Fresh Coriander ",
-    //         description: "Coriander, also known as cilantro or Chinese parsley, is an annual herb in the family Apiaceae. It is also known as dhania or kothmir in Hindi.",
-    //         price: "3,000 per Kg",
-    //         quantity: 10,
-    //         image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204677/Spices/coriander_rdyinw.png",
-    //         category: {
-    //             connectOrCreate: {
-    //                 where: {
-    //                     name: "Herbs",
-    //                 },
-    //                 create: {
-    //                     name: "Herbs",
-    //                 },
-    //             },
-    //         },
-    //     },
-    // });
+    await primsa.product.create({
+        data: {
+            title: "Fresh Coriand ",
+            description: "Coriander, also known as cilantro or Chinese parsley, is an annual herb in the family Apiaceae. It is also known as dhania or kothmir in Hindi.",
+            price: "3,000 per Kg",
+            quantity: 10,
+            image:"https://res.cloudinary.com/druug5tgz/image/upload/v1675204677/Spices/coriander_rdyinw.png",
+            category: {
+                connectOrCreate: {
+                    where: {
+                        name: "Herbs",
+                    },
+                    create: {
+                        name: "Herbs",
+                    },
+                },
+            },
+        },
+    });
 
     // await primsa.product.create({
     //     data: {
